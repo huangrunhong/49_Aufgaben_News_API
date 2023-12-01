@@ -1,0 +1,16 @@
+button {
+  padding: 0.5rem 1.5rem;
+  background-color: yellowgreen;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.25rem;
+  color: white;
+}
+
+button:hover {
+  background-color: green;
+}
+
+button:active {
+  box-shadow: 0 2px 0.25rem rgb(9, 37, 9);
+}
