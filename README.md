@@ -29,7 +29,9 @@ responsive design
 
 ## Screenshots
 
-![screenshort]()
+![screenshort1](https://github.com/huangrunhong/49_Aufgaben_News_API/blob/main/src/images/newsAPI_1.png)
+![screenshort2](https://github.com/huangrunhong/49_Aufgaben_News_API/blob/main/src/images/newsAPI_2.png)
+![screenshort3](https://github.com/huangrunhong/49_Aufgaben_News_API/blob/main/src/images/newsAPI_3.png)
 
 ## Author
 
