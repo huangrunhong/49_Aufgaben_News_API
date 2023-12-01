@@ -12,8 +12,9 @@ const Detail = () => {
   const searchIn = params.search || "";
 
   useEffect(() => {
+    // fetch(`/en.json`)
     fetch(
-      `http://newsapi.org/v2/everything?q=apple&from=2023-11-30&to=2023-11-30&sortBy=popularity&language=${language}&apiKey=adbdce8e05ca48d0a6aa6ed6e8e76702`
+      `https://newsapi.org/v2/everything?q=apple&from=2023-11-30&to=2023-11-30&${language}&sortBy=popularity&apiKey=adbdce8e05ca48d0a6aa6ed6e8e76702`
     )
       .then((response) => response.json())
       .then((data) => setNewsData(data.articles))

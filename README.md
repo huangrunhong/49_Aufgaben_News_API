@@ -1,8 +1,36 @@
-# React + Vite
+# Project News API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This is a news website created using the News API.
+You can find news related to specific languages and keywords by using a search engine. By entering the keywords you are interested in in the search bar and selecting the language of interest, the search engine will display news reports related to these identifiers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Function/Features
+
+1. Search news by keyword
+2. Filter news by language
+3. Show news list
+4. View news details
+
+## Link
+
+[Projekt News API](https://github.com/huangrunhong/49_Aufgaben_News_API)
+
+## Tools/Technologies
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+
+## Screen size
+
+responsive design
+
+## Screenshots
+
+![screenshort]()
+
+## Author
+
+[Runhong Huang](https://github.com/huangrunhong)
