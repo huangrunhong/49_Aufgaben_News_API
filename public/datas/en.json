@@ -1,7 +1,5 @@
-{
-    "status": "ok",
-    "totalResults": 1043,
-    "articles": [
+
+    [
       {
         "source": {
           "id": "engadget",
@@ -1303,4 +1301,3 @@
         "content": "One of the main changes rumored to be coming to the regular iPhone 16 models is the switch to a vertical camera alignment instead of the current diagonal alignment. While many could think this is jus… [+2264 chars]"
       }
     ]
-  }

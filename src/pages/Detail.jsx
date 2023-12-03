@@ -11,24 +11,34 @@ const Detail = () => {
   const language = params.language || "en";
   const searchIn = params.search || "";
 
+  // fetch lokale API
+
   useEffect(() => {
-    // fetch(`/en.json`)
-    fetch(
-      `https://newsapi.org/v2/everything?q=apple&from=2023-11-30&to=2023-11-30&${language}&sortBy=popularity&apiKey=adbdce8e05ca48d0a6aa6ed6e8e76702`
-    )
+    fetch(`/datas/${language}.json`)
       .then((response) => response.json())
-      .then((data) => setNewsData(data.articles))
+      .then((data) => setNewsData(data))
       .catch((err) => console.error(err));
   }, []);
 
+  // fetch online API, aber es klappt nicht so good, wenn die seite gebuided ist
+
+  // useEffect(() => {
+  //   fetch(
+  //     `https://newsapi.org/v2/everything?q=apple&from=2023-11-30&to=2023-11-30&language=${language}&sortBy=popularity&apiKey=adbdce8e05ca48d0a6aa6ed6e8e76702`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => setNewsData(data.articles))
+  //     .catch((err) => console.error(err));
+  // }, []);
+
   const newsFilter = newsData.filter((news) =>
-    news.title.toLowerCase().includes(searchIn.toLowerCase())
+    news.title?.toLowerCase().includes(searchIn?.toLowerCase())
   );
 
   const newsDetail = newsFilter.filter(
     (news, index) => index.toString() === newsIndex.toString()
   );
-  console.log(newsDetail);
+
   return (
     <section className="detailPage">
       {newsDetail.length ? (

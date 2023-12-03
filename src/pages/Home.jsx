@@ -4,23 +4,33 @@ import Button from "../components/Button";
 
 const Home = () => {
   const [searchIn, setSearchIn] = useState("");
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("");
   const [newsData, setNewsData] = useState([]);
 
-  // Hier fetched newsData
-  const newsFilter = newsData.filter((news) =>
-    news.title.toLowerCase().includes(searchIn.toLowerCase())
-  );
+  // fetch lokale API
   const newsSearch = () => {
-    // fetch(`/en.json`)
-    fetch(
-      `https://newsapi.org/v2/everything?q=apple&from=2023-11-30&to=2023-11-30&${language}&sortBy=popularity&apiKey=adbdce8e05ca48d0a6aa6ed6e8e76702`
-    )
+    fetch(`/datas/${language}.json`)
       .then((response) => response.json())
-      .then((data) => {
-        setNewsData(data.articles);
-      });
+      .then((data) => setNewsData(data))
+      .catch((err) => console.error(err));
   };
+
+  // fetch online API, Aber nicht so gut klappt
+  // const newsSearch = () => {
+  //   fetch(
+  //     `https://newsapi.org/v2/everything?q=apple&from=2023-11-30&to=2023-11-30&language=${language}&sortBy=popularity&apiKey=adbdce8e05ca48d0a6aa6ed6e8e76702`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setNewsData(data.articles);
+  //     });
+  // };
+
+  // Hier filtert die News
+
+  const newsFilter = newsData.filter((news) =>
+    news.title?.toLowerCase().includes(searchIn?.toLowerCase())
+  );
 
   //   Hier kommt die HTML
   return (
@@ -46,14 +56,14 @@ const Home = () => {
             <option value="en">English</option>
             <option value="es">Spanisch</option>
             <option value="fr">French</option>
-            <option value="he">Hebrew</option>
+            {/* <option value="he">Hebrew</option> */}
             <option value="it">Italian</option>
             <option value="nl">Dutch</option>
-            <option value="no">Norwegian</option>
+            {/* <option value="no">Norwegian</option> */}
             <option value="pt">Portugese</option>
             <option value="ru">Russian</option>
             <option value="sv">Swedish</option>
-            <option value="ud">Udmurdt</option>
+            {/* <option value="ud">Udmurdt</option> */}
             <option value="zh">Chinese</option>
           </select>
 
